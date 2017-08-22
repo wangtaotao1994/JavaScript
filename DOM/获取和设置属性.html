@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping list</title>
+</head>
+<body>
+    <h1>What to buy</h1>
+    <p title="a gennal reminder">Don't forget to buy this stuff.</p>
+    <p>This is just a test.</p>
+    <ul id="purchases">
+        <li>A tin of beans</li>
+        <li class="sale">Cheese</li>
+        <li class="sale important">Milk</li>
+    </ul> 
+    <script>
+        // var paras = document.getElementsByTagName("p");             
+        // for (var i=0;i<paras.length;i++)
+        // {
+        //     alert(paras[i].getAttribute("title"));                  //第一个返回第一个p的title的属性值，第二个返回null
+        // }
+
+        //修改代码使只有title属性的p才弹出消息
+        // var paras = document.getElementsByTagName("p");
+        // for (var i=0;i<paras.length;i++)
+        // {
+        //     var title_text = paras[i].getAttribute("title");
+        //     //if (title_text != null)                             //代码优化
+        //     if (title_text)
+        //     {
+        //         alert(title_text);
+        //     }
+        // }
+        
+        //为ul设置title属性
+        // var shopping = document.getElementById("purchases");
+        // alert(shopping.getAttribute("title"));
+        // shopping.setAttribute("title","a list of goods");
+        // alert(shopping.getAttribute("title"));
+
+        // 改变已有title属性的p的属性值
+        var paras = document.getElementsByTagName("p");
+        for (var i=0;i<paras.length;i++)
+        {
+            var title_text = paras[i].getAttribute("title");
+            if(title_text)
+            {
+                paras[i].setAttribute("title","brand new title text");
+                alert(paras[i].getAttribute("title"));
+            }
+        }
+    </script>       
+</body>
+</html>
